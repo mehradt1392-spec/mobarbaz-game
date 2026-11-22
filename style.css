@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+body {
+background: #090b12;
+color: white;
+font-family: 'Vazirmatn', sans-serif;
+min-height: 100vh;
+display: flex;
+align-items: center;
+justify-content: center;
+overflow: hidden;
+}
+
+#game {
+width: 100%;
+max-width: 1100px;
+min-height: 650px;
+background:
+radial-gradient(circle at 50% 40%, #292039 0%, transparent 55%),
+linear-gradient(135deg, #111827, #08090e);
+display: flex;
+align-items: center;
+justify-content: center;
+border: 1px solid #373044;
+position: relative;
+overflow: hidden;
+}
+
+#main-menu {
+text-align: center;
+position: relative;
+z-index: 2;
+}
+
+#main-menu h1 {
+font-size: clamp(65px, 12vw, 110px);
+font-weight: 900;
+color: #f4f0e9;
+text-shadow: 0 0 35px rgba(255, 40, 40, 0.5);
+letter-spacing: -4px;
+}
+
+#main-menu p {
+color: #d64b4b;
+font-size: 18px;
+letter-spacing: 8px;
+margin-bottom: 45px;
+direction: ltr;
+}
+
+button {
+display: block;
+width: 270px;
+margin: 14px auto;
+padding: 16px;
+background: linear-gradient(100deg, #a51f32, #e34a3c);
+border: 1px solid #ff7768;
+color: white;
+font-family: inherit;
+font-size: 17px;
+font-weight: 700;
+cursor: pointer;
+transition: 0.25s;
+clip-path: polygon(8% 0, 100% 0, 92% 100%, 0 100%);
+}
+
+button:hover {
+transform: scale(1.06);
+background: linear-gradient(100deg, #e34a3c, #ff705d);
+box-shadow: 0 0 25px rgba(255, 60, 60, 0.35);
+}
+
+#game::before {
+content: "MOBARBAZ";
+position: absolute;
+bottom: 20px;
+left: 25px;
+font-size: 12px;
+letter-spacing: 5px;
+color: #777;
+direction: ltr;
+}
+
+@media (max-width: 600px) {
+#game {
+min-height: 100vh;
+border: none;
+}
+
+#main-menu h1 {
+    font-size: 65px;
+}
+
+}
